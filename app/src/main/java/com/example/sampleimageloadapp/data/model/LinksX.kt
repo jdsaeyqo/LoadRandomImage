@@ -1,4 +1,4 @@
-package com.example.sampleimageloadapp.model
+package com.example.sampleimageloadapp.data.model
 
 
 import com.google.gson.annotations.SerializedName
