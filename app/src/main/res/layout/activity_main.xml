@@ -8,6 +8,7 @@
     tools:context=".MainActivity">
 
     <EditText
+        android:id="@+id/searchEditText"
         android:inputType="text"
         android:layout_width="match_parent"
         android:layout_height="48dp"
