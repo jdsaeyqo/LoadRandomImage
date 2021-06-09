@@ -10,7 +10,7 @@ import retrofit2.create
 
 object Repository {
 
-    private val unsplahApiService: UnsplahApiService by lazy {
+    private val UNSPLASH_API_SERVICE: UnsplashApiService by lazy {
         Retrofit.Builder()
             .baseUrl(Url.UNSPLASH_BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
@@ -20,7 +20,7 @@ object Repository {
     }
 
     suspend fun getRandomPhotos(query : String?) : List<PhotoResponse>? =
-        unsplahApiService.getRandomPhotos(query).body()
+        UNSPLASH_API_SERVICE.getRandomPhotos(query).body()
 
     private fun buildOkHttpClient() : OkHttpClient =
         OkHttpClient.Builder()
