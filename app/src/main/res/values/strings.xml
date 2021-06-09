@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">SampleImageLoadApp</string>
+    <string name="search_image">이미지를 검색해주세요</string>
 </resources>
