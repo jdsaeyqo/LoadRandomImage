@@ -10,7 +10,7 @@ interface UnsplahApiService {
 
     @GET(
         "photos/random?" +
-                "client_id = ${BuildConfig.UNSPLASH_ACCESS_KEY}"+
+                "client_id=${BuildConfig.UNSPLASH_ACCESS_KEY}"+
                 "&count=30"
     )
     suspend fun getRandomPhotos(
