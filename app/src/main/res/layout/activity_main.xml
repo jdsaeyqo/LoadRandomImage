@@ -28,13 +28,49 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
         <androidx.recyclerview.widget.RecyclerView
             tools:listitem="@layout/item_photo"
             android:clipToPadding="false"
             android:id="@+id/recyclerView"
+            android:visibility="invisible"
             android:paddingVertical="6dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
+
+            <TextView
+                app:drawableTopCompat="@drawable/ic_baseline_refresh_24"
+                android:layout_marginTop="80dp"
+                android:visibility="gone"
+                android:drawablePadding="6dp"
+                android:id="@+id/errorDescriptionTextVIew"
+                android:gravity="center"
+                android:text="문제가 생겼어요\n아래로 당겨 새로고침 해주세요"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="HardcodedText" />
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <include layout="@layout/view_shimmer_item_photo"/>
+
+            <include layout="@layout/view_shimmer_item_photo"/>
+
+            </LinearLayout>
+        </FrameLayout>
 
 
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
